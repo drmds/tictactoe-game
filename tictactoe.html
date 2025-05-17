@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="game, tictactoe, practise, frontend, html, css, javascript, coding, improvement">
+    <link rel="stylesheet" href="styles.css">
+    <title>TicTacToe Game</title>
+</head>
+
+<body>
+    <div id="container">
+        <div id="intro">
+            <h3>Are You Ready To Defeat Yourself?</h3>
+            <p id="guide">Click on a field to place your <b>X</b> choice.</p>
+            <hr id="line">
+        </div>
+        <div id="gamefield">
+            <span class="item" id="one"></span>
+            <span class="item" id="two"></span>
+            <span class="item" id="three"></span>
+            <span class="item" id="four"></span>
+            <span class="item" id="five"></span>
+            <span class="item" id="six"></span>
+            <span class="item" id="seven"></span>
+            <span class="item" id="eight"></span>
+            <span class="item" id="nine"></span>
+        </div>
+        <div id="alertBox">
+            <p id="winner">Blue has won!</p>
+            <button id="restartBtn" onclick="restart()">RESTART</button>
+            <button id="okBtn" onclick="okay()">Got it</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

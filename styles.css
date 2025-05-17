@@ -1,0 +1,128 @@
+/*easily customisable color theme*/
+:root {
+    --blue: #18255B;
+    --pink: #834e48;
+    --lighter: rgb(182, 178, 167);
+    --darker: rgb(161, 158, 148);
+    --dark: rgb(58, 56, 52);
+}
+
+body {
+    box-sizing: border-box;
+    background-image: linear-gradient(to right, var(--darker), var(--darker) 5px, var(--lighter) 5px, var(--lighter));
+    background-size: 10px 100%;
+}
+
+#container {
+    background-color: var(--lighter);
+    opacity: 0.9;
+    min-width: 300px;
+    max-width: 600px;
+    margin: auto;
+    box-shadow: 1rem 1rem 4rem rgb(116, 113, 104);
+}
+
+/*Introduction part:*/
+#intro {
+    padding: 1rem 2rem 2rem 2rem;
+    color: black;
+}
+
+#intro > h3 {
+    text-transform: uppercase;
+    font-weight: 1000;
+    font-size: 3rem;
+    line-height: 2.5rem;
+    margin-top: 2rem;
+}
+
+#intro > p {
+    font-size: 1.2rem;
+    margin: -1rem 0 1rem 0;
+}
+
+#line {
+    width: 295px;
+    margin: -0.5rem 0 1rem 0;
+    border: 3px solid;
+    border-radius: 3px;
+    border-color: var(--pink);
+}
+
+/*Game area:*/
+#gamefield {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 1fr;
+    margin: auto;
+    max-width: 550px;
+    padding-bottom: 2rem;
+}
+
+.item {
+    aspect-ratio: 1/1;
+    box-shadow: 0.5rem 0.5rem 1rem rgb(131, 128, 119);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    margin: 0.3rem;
+    font-size: 4rem;
+}
+
+.item:hover {
+    cursor: pointer;
+    box-shadow: 0.5rem 0.5rem 1rem var(--darker);
+}
+
+/*Action features:*/
+#alertBox {
+    position: fixed;
+    background: var(--darker);
+    font-size: 2rem;
+    text-align: center;
+    padding: 1rem 5rem;
+    top: 40vh;
+    left: 50%;
+    margin-left: -170px;
+    border-radius: 0.8rem;
+    box-shadow: 0px 3px 8px var(--dark);
+    display: none;
+}
+
+@media only screen and (max-width: 400px) {
+    #alertBox {
+        left: 55%;
+    }
+}
+
+#restartBtn {
+    padding: 1rem;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    transform: translateX(0.5rem);
+    margin-top: -1rem;
+    background-color: var(--dark);
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+#okBtn {
+    padding: 1rem;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    margin-top: -1rem;
+    margin-right: 2rem;
+    background-color: var(--dark);
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+#restartBtn:hover, #okBtn:hover {
+    background: var(--dark);
+}
